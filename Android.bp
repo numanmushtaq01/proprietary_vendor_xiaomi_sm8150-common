@@ -11818,6 +11818,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     prefer: true,
     system_ext_specific: true,
 }
@@ -11940,7 +11941,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
-    allow_undefined_symbols: true,
+    check_elf_files: false,
     prefer: true,
     system_ext_specific: true,
 }
@@ -12096,6 +12097,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     prefer: true,
     system_ext_specific: true,
 }
@@ -12286,6 +12288,32 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "android.hardware.common-V2-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
     prefer: true,
     system_ext_specific: true,
 }
@@ -12680,8 +12708,6 @@ cc_prebuilt_library_shared {
                 "libandroid_runtime",
                 "libui",
                 "libinput",
-                "libbinder",
-                "libgui",
                 "libnativehelper",
                 "libutils",
                 "liblog",
@@ -12701,6 +12727,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     system_ext_specific: true,
 }
@@ -15012,6 +15039,7 @@ cc_prebuilt_binary {
         },
     },
     compile_multilib: "32",
+    allow_undefined_symbols: true,
     strip: {
         none: true,
     },
@@ -15025,7 +15053,7 @@ cc_prebuilt_binary {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/system_ext/bin/wfdservice64",
+                "proprietary/system_ext/bin/wfdservice",
             ],
             shared_libs: [
                 "liblog",
