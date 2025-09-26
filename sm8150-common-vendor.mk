@@ -131,6 +131,9 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8150-common/proprietary/vendor/etc/wifi/aoa_cldb_swl14.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/aoa_cldb_swl14.bin \
     vendor/xiaomi/sm8150-common/proprietary/vendor/etc/xtra_root_cert.pem:$(TARGET_COPY_OUT_VENDOR)/etc/xtra_root_cert.pem \
     vendor/xiaomi/sm8150-common/proprietary/vendor/etc/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf \
+    vendor/xiaomi/sm8150-common/proprietary/vendor/firmware/a650_gmu.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/a650_gmu.bin \
+    vendor/xiaomi/sm8150-common/proprietary/vendor/firmware/a650_sqe.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a650_sqe.fw \
+    vendor/xiaomi/sm8150-common/proprietary/vendor/firmware/a650_zap.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/a650_zap.elf \
     vendor/xiaomi/sm8150-common/proprietary/vendor/radio/qcril_database/qcril.db:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/qcril.db \
     vendor/xiaomi/sm8150-common/proprietary/vendor/radio/qcril_database/upgrade/0_initial.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/0_initial.sql \
     vendor/xiaomi/sm8150-common/proprietary/vendor/radio/qcril_database/upgrade/1_version_intro.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/1_version_intro.sql \
@@ -152,6 +155,7 @@ PRODUCT_PACKAGES += \
     libEGL_adreno \
     libGLESv1_CM_adreno \
     libGLESv2_adreno \
+    libVkLayer_ADRENO_qprofiler \
     libq3dtools_adreno \
     libq3dtools_esx \
     vendor.qti.hardware.bluetooth_audio@2.0-impl \
@@ -160,6 +164,7 @@ PRODUCT_PACKAGES += \
     libC2D2 \
     libCB \
     libOpenCL \
+    libOpenCL_adreno \
     libVkLayer_q3dtools \
     libadreno_app_profiles \
     libadreno_utils \
@@ -174,8 +179,11 @@ PRODUCT_PACKAGES += \
     libfastcvopt \
     libgpudataproducer \
     libgsl \
+    libkcl \
+    libkernelmanager \
     libllvm-glnext \
     libllvm-qcom \
+    libllvm-qgl \
     libmdsprpc \
     libmmosal_vendor \
     libscveCommon \
