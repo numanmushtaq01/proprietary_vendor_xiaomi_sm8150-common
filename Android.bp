@@ -11940,6 +11940,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    allow_undefined_symbols: true,
     prefer: true,
     system_ext_specific: true,
 }
